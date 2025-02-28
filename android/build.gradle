@@ -25,7 +25,17 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
+    namespace= 'yukams.app.background_locator_2'
     compileSdkVersion 29
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8 // Or the version you want to use
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
